@@ -1,0 +1,18 @@
+<Alloy>
+      <!-- Instance of the model -->
+      <Collection src="toDoList" />
+      <Window class="container">
+            <TextField id="tfInsert"></TextField>
+            <Button id="btnInsert" >Insert</Button>
+            <!-- Specifies the collection singleton or instance to bind to the table. -->
+            <TableView id="tbToDoList" dataCollection="toDoList">
+                  <!-- rowId="{id_toDoList} is a custom property in order to have a reference to the primary key of the records -->
+                  <TableViewRow id="listRow" rowId="{id_toDoList}" hasCheck="{hasCheck}">
+                        <View id="componentView">
+                             <!-- text="{value} is the value of the record of the database -->
+                        	<Label id="lblValue" text="{value}"></Label>
+                        </View>
+                  </TableViewRow>
+            </TableView>
+      </Window>
+</Alloy>
